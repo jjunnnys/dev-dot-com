@@ -1,62 +1,55 @@
 import React from 'react';
-import { Form, Input } from 'antd';
-import styled from 'styled-components';
+import { Button } from 'antd';
+import { AuthInput, AuthForm } from './styles';
+import { onChangeType } from '../../lib/types';
 
-interface Props {
+type LoginPresentainalProps = {
   email: string;
-  onChangeEmail: any;
-  password: any;
-  onChangePassword: any;
-}
+  onChangeEmail: onChangeType;
+  password: string;
+  onChangePassword: onChangeType;
+};
 
-const LoginForm = styled(Form)`
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
-
-  width: auto;
-
-  .login-column {
-    margin-top: 1rem;
-  }
-`;
-
-const LoginInput = styled(Input)``;
-
-const LoginPresentainal = ({
+function LoginPresentainal({
   email,
   onChangeEmail,
   password,
   onChangePassword,
-}: Props) => {
+}: LoginPresentainalProps) {
   return (
-    <LoginForm>
-      <div className="login-column">
+    <AuthForm>
+      <h1 style={{ fontSize: '2rem' }}>로그인</h1>
+      <div className="auth-column">
         <label htmlFor="email">email</label>
         <br />
-        <LoginInput
-          type="text"
+        <AuthInput
+          type="email"
           name="email"
           placeholder="이메일을 입력해주세요"
           value={email}
           onChange={onChangeEmail}
+          size="large"
+          required
         />
       </div>
-      <div className="login-column">
+      <div className="auth-column">
         <label htmlFor="password">password</label>
         <br />
-        <LoginInput
+        <AuthInput
           type="password"
           name="password"
           placeholder="패스워드를 입력해주세요"
           value={password}
           onChange={onChangePassword}
+          size="large"
+          required
         />
       </div>
-    </LoginForm>
+      <Button type="primary" htmlType="submit" size="large">
+        로그인
+      </Button>
+    </AuthForm>
   );
-};
+}
 
 export default LoginPresentainal;

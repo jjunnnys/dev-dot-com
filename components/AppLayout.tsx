@@ -1,12 +1,12 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { Row, Col, Menu } from 'antd';
 
 import styled from 'styled-components';
 
-interface Props {
-  children?: ReactNode;
-}
+type AppLayoutProps = {
+  children?: React.ReactNode;
+};
 
 const CenterCol = styled(Col)`
   display: flex;
@@ -14,10 +14,11 @@ const CenterCol = styled(Col)`
 
   .center {
     width: 80%;
+    background: lightgray;
   }
 `;
 
-const AppLayout = ({ children }: Props) => {
+function AppLayout({ children }: AppLayoutProps) {
   return (
     <>
       <Row gutter={[30, 20]}>
@@ -65,6 +66,6 @@ const AppLayout = ({ children }: Props) => {
       </Row>
     </>
   );
-};
+}
 
 export default AppLayout;

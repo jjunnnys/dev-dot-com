@@ -1,17 +1,18 @@
 import { useState, useCallback } from 'react';
+import { onChangeType } from '../lib/types';
 
-interface Props {
-  initialValue: string;
-}
+const useInput = (initialValue = ''): [string, onChangeType, () => void] => {
+  const [value, setVlaue] = useState(initialValue);
 
-const useInput = ({ initialValue }: Props) => {
-  const [value, setVlaue] = useState<string>(initialValue);
+  const handler: onChangeType = useCallback((e) => {
+    const { value } = e.target;
 
-  const handler = useCallback((e) => {
-    setVlaue(e.target.value);
+    setVlaue(() => value);
   }, []);
 
-  return [value, handler, setVlaue];
+  const reset = () => setVlaue(() => '');
+
+  return [value, handler, reset];
 };
 
 export default useInput;

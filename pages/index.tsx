@@ -1,10 +1,8 @@
-import React, { FC } from 'react';
+import React from 'react';
 import HomePresentational from '../components/Home/HomePresentational';
 
-interface Props {}
-
-const Home: FC = (props: Props) => {
+function Home() {
   return <HomePresentational />;
-};
+}
 
 export default Home;

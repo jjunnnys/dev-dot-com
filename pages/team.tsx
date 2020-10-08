@@ -1,10 +1,8 @@
-import React, { FC } from 'react';
+import React from 'react';
 import TeamPresentainal from '../components/Team/TeamPresentainal';
 
-interface Props {}
-
-const Team: FC = (props: Props) => {
+function Team() {
   return <TeamPresentainal />;
-};
+}
 
 export default Team;

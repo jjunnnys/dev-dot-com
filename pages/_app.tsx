@@ -5,11 +5,11 @@ import 'antd/dist/antd.css';
 import '../styles/index.css';
 import AppLayout from '../components/AppLayout';
 
-interface Props {
+type AppProps = {
   Component: ElementType;
-}
+};
 
-const App = ({ Component }: Props) => {
+function App({ Component }: AppProps) {
   return (
     <>
       <Head>
@@ -21,6 +21,6 @@ const App = ({ Component }: Props) => {
       </AppLayout>
     </>
   );
-};
+}
 
 export default App;

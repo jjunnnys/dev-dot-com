@@ -1,20 +1,11 @@
-import React, { FC, useState } from 'react';
+import React from 'react';
 
 import LoginPresentainal from '../components/Auth/LoginPresentainal';
+import useInput from '../hooks/useInput';
 
-interface Props {}
-
-const Login: FC = (props: Props) => {
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
-
-  const onChangeEmail = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const onChangePassword = (e) => {
-    setPassword(e.target.value);
-  };
+function Login() {
+  const [email, onChangeEmail] = useInput('');
+  const [password, onChangePassword] = useInput('');
 
   return (
     <LoginPresentainal
@@ -24,6 +15,6 @@ const Login: FC = (props: Props) => {
       onChangePassword={onChangePassword}
     />
   );
-};
+}
 
 export default Login;
