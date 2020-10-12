@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
-import SignUpPresentainal from '../components/Auth/SignUpPresentainal';
-import useInput from '../hooks/useInput';
-import { onSubmitType } from '../lib/types';
+import SignUpPresentainal from '../../components/Auth/SignUpPresentainal';
+import useInput from '../../hooks/useInput';
+import { onSubmitType } from '../../lib/types';
 
 function Signup() {
   const [username, onChangeUsername] = useInput('');

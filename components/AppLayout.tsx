@@ -5,7 +5,7 @@ import { Row, Col, Menu } from 'antd';
 import styled from 'styled-components';
 
 type AppLayoutProps = {
-  children?: React.ReactNode;
+  children: React.ReactNode;
 };
 
 const CenterCol = styled(Col)`
@@ -41,18 +41,38 @@ function AppLayout({ children }: AppLayoutProps) {
                     <a>채용관</a>
                   </Link>
                 </Menu.Item>
+                <Menu.Item>
+                  <Link href="/coding">
+                    <a>코딩 강의</a>
+                  </Link>
+                </Menu.Item>
+                <Menu.Item>
+                  <Link href="/english">
+                    <a>영어 강의</a>
+                  </Link>
+                </Menu.Item>
+                <Menu.Item>
+                  <Link href="/contact-us">
+                    <a>contact us</a>
+                  </Link>
+                </Menu.Item>
               </Menu>
             </Col>
             <Col xs={6}>
               <Menu mode="horizontal">
                 <Menu.Item>
-                  <Link href="/login">
+                  <Link href="/auth/signin">
                     <a>로그인</a>
                   </Link>
                 </Menu.Item>
                 <Menu.Item>
-                  <Link href="/signup">
+                  <Link href="/auth/signup">
                     <a>회원가입</a>
+                  </Link>
+                </Menu.Item>
+                <Menu.Item>
+                  <Link href="/basket">
+                    <a>장바구니</a>
                   </Link>
                 </Menu.Item>
               </Menu>

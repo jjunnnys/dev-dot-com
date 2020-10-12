@@ -20,7 +20,7 @@ function LoginPresentainal({
     <AuthForm>
       <h1 style={{ fontSize: '2rem' }}>로그인</h1>
       <div className="auth-column">
-        <label htmlFor="email">email</label>
+        <label htmlFor="email">이메일</label>
         <br />
         <AuthInput
           type="email"
@@ -33,7 +33,7 @@ function LoginPresentainal({
         />
       </div>
       <div className="auth-column">
-        <label htmlFor="password">password</label>
+        <label htmlFor="password">비밀번호</label>
         <br />
         <AuthInput
           type="password"

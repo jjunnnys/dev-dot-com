@@ -1,9 +1,9 @@
 import React from 'react';
 
-import LoginPresentainal from '../components/Auth/LoginPresentainal';
-import useInput from '../hooks/useInput';
+import LoginPresentainal from '../../components/Auth/LoginPresentainal';
+import useInput from '../../hooks/useInput';
 
-function Login() {
+function SignIn() {
   const [email, onChangeEmail] = useInput('');
   const [password, onChangePassword] = useInput('');
 
@@ -17,4 +17,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default SignIn;

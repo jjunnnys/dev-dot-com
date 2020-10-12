@@ -10,6 +10,10 @@ export const AuthForm = styled.form`
 
   width: auto;
 
+  h1 {
+    font-size: 2rem;
+  }
+
   .auth-column {
     margin-top: 1rem;
   }

@@ -28,7 +28,7 @@ function SignUpPresentainal({
 }: SignUpPresentainalProps) {
   return (
     <AuthForm onSubmit={onSubmitSignUp}>
-      <h1 style={{ fontSize: '2rem' }}>회원가입</h1>
+      <h1>가입하기</h1>
       <div className="auth-column">
         <label htmlFor="name">이름</label>
         <br />
